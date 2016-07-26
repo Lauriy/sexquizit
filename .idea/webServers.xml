@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3dca87cd-66f1-4300-85c7-f2a17d00e1b7" name="Digitalocean" url="http://46.101.238.121">
+        <fileTransfer host="46.101.238.121" port="22" rootFolder="/home/wantwillwont" accessType="SFTP" password="dfe1dfcfdfc6dfc7dfc3dffcdfc3dfc1dfdedfc5dfd8dfc3dfc3dfc4" username="wantwillwont">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
