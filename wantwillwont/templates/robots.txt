@@ -1,5 +1,0 @@
-# www.robotstxt.org/
-
-# TODO: Allow indexing when live
-User-agent: *
-Disallow: /
