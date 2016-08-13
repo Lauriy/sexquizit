@@ -3,8 +3,8 @@ import sys
 
 import os
 
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "wantwillwont.settings.local")
+if __name__ == '__main__':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'want_will_wont.settings.local')
 
     from django.core.management import execute_from_command_line
 

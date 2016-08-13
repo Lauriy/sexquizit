@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+            <h2>{% trans "Giver" %}</h2>
+            <p>{% trans "Start filling out a questionnaire to find out what you are willing (or not) to do for your partner." %}</p>
+            <p><a class="btn btn-default" href="{% url "answer_set_start" %}" role="button">{% trans "View details" %} &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Receiver</h2>
+            <p>{% trans "Start filling out a questionnaire to find out what you'd like your partner to do for you." %}</p>
+            <p><a class="btn btn-default" href="#" role="button">{% trans "View details" %} &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Something else</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+    </div>
+{% endblock %}
