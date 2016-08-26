@@ -2,7 +2,7 @@ import uuid
 
 from django.contrib.auth.models import User
 from django.db.models import CASCADE, UUIDField, ForeignKey, Model, CharField, OneToOneField, \
-    PositiveSmallIntegerField, Json
+    PositiveSmallIntegerField
 from django.db.models.signals import post_save
 from django.utils.translation import ugettext_lazy as _
 

@@ -13,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
     {% compress css %}
-        <link rel="stylesheet" href="{% static "css/want-will-wont.css" %}">
+        <link rel="stylesheet" href="{% static "css/main.css" %}">
     {% endcompress %}
-    <script src="{% static "js/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+    <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
 </head>
 <body>
     <!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}<![endif]-->
@@ -63,7 +63,7 @@
     </footer>
 </div> <!-- /container -->
 {% compress js %}
-    <script src="{% static "js/want-will-wont.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
 {% endcompress %}
         <!-- Google Analytics: TODO: change UA-XXXXX-X to be your site's ID. -->
         <script>
