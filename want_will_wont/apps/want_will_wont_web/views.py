@@ -1,14 +1,13 @@
-from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse
-from django.shortcuts import redirect, get_object_or_404, render_to_response
+from django.shortcuts import get_object_or_404, render_to_response
 from django.template import RequestContext
-from django.views.generic import TemplateView
 
-from want_will_wont.apps.want_will_wont_web.models import AnswerSet, Activity, ActivityCategory
+from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCategory
 
 
-class HomeView(TemplateView):
-    template_name = 'home.html'
+def home(request):
+    context = {}
+
+    return render_to_response('home.html', RequestContext(request, context))
 
 
 def answer(request):
@@ -30,3 +29,11 @@ def compare(request, secret1=None, secret2=None):
     }
 
     return render_to_response('compare.html', RequestContext(request, context))
+
+
+def about(request):
+    context = {
+        'is_about': True
+    }
+
+    return render_to_response('about.html', RequestContext(request, context))

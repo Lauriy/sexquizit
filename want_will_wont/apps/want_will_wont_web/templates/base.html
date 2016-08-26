@@ -16,49 +16,36 @@
         <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
     {% endcompress %}
     {% compress css %}
-        <link rel="stylesheet" href="{% static "css/main.css" %}">
         <link rel="stylesheet" href="{% static "css/foundation.css" %}">
         <link rel="stylesheet" href="{% static "css/custom.css" %}">
     {% endcompress %}
-
-
-
-
 </head>
-
 <body>
     <!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}<![endif]-->
-    {% block content %}{% endblock %}
     <header class="header">
-  <img class="logo" src="../static/logo.png" alt="logo"><h1 class="headline">Want Will Wont</h1>
-  <ul class="header-subnav">
-    <li><a href="#" class="is-active">Begin!</a></li>
-    <li><a target="_self" href="./info">About</a></li>
-    <li><a target="_self" href="./contact">Contact</a></li>
-  </ul>
-</header>
-
-
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-
-
+        <img class="logo" src="{% static "logo.png" %}" alt="logo">
+        <h1 class="headline">Want Will Wont</h1>
+        <ul class="header-subnav">
+            <li><a href="#" {% if is_home %}class="is-active"{% endif %}>Begin!</a></li>
+            <li><a target="_self" {% if is_about %}class="is-active"{% endif %} href="{% url "about" %}">About</a></li>
+            <li><a target="_self" href="./contact">Contact</a></li>
+        </ul>
+    </header>
+    {% block content %}{% endblock %}
     <footer>
-        <p><small>&copy; 2016 Want Will Wont</small></p>
+        <p><small>&copy; 2016 Want Will Won't</small></p>
     </footer>
-
-{% compress js %}
-    <script src="{% static "js/main.js" %}"></script>
-{% endcompress %}
-
-        <!-- Google Analytics: TODO: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+    {% compress js %}
+        <script src="{% static "js/main.js" %}"></script>
+    {% endcompress %}
+    <!-- Google Analytics: TODO: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
 </html>

@@ -1,40 +1,57 @@
-.logo{
-    padding-top:0.5rem;
-    padding-bottom:0.5rem;
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.logo {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .header {
-  text-align: center;
-  background: #074E68;
-  background-size: cover;
-  position: relative;
-  overflow: visible;
-  padding-top: 1rem;
-  padding-bottom: 3.9rem; }
-  .header .headline {
-    color: #ffe; }
+    text-align: center;
+    background: #074E68;
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+    padding-top: 1rem;
+    padding-bottom: 3.9rem;
+}
+
+.header .headline {
+    color: #ffe;
+}
 
 .header-subnav {
-  float: none;
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  bottom: 0;
-  width: 100%; }
-  .header-subnav li {
     float: none;
-    display: inline-block; }
-    .header-subnav li a {
-      padding: 0.9rem 1rem;
-      font-size: 0.75rem;
-      color: #ffe;
-      text-transform: uppercase;
-      display: block;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: all 0.35s ease-in-out; }
-      .header-subnav li a.is-active {
-        background: rgba(250, 250, 250, 0.15); }
-      .header-subnav li a:hover {
-        background: rgba(250, 250, 250, 0.15);
-        transition: all 0.35s ease-in-out; }
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-subnav li {
+    float: none;
+    display: inline-block;
+}
+
+.header-subnav li a {
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    color: #ffe;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.35s ease-in-out;
+}
+
+.header-subnav li a.is-active {
+    background: rgba(250, 250, 250, 0.15);
+}
+
+.header-subnav li a:hover {
+    background: rgba(250, 250, 250, 0.15);
+    transition: all 0.35s ease-in-out;
+}
