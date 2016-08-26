@@ -19,7 +19,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_extensions',
-    'bootstrap3',
     'compressor',
     'want_will_wont.apps.want_will_wont_web',
     'allauth',
