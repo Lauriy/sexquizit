@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
-from want_will_wont.apps.want_will_wont_web.views import HomeView, start_answering, resume_answering
+from want_will_wont.apps.want_will_wont_web.views import HomeView, answer, compare
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -12,6 +12,6 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^answer/$', start_answering, name='answer_set_start'),
-    url(r'^answer/(?P<pk>\d+)/$', resume_answering, name='answer_set_resume'),
+    url(r'^answer/$', answer, name='answer'),
+    url(r'^compare/(?P<secret1>\d+)/(?P<secret2>\d+)/$', compare, name='compare'),
 )

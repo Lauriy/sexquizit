@@ -1,3 +1,12 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
 {% block content %}
-    {{ answer_set }}
+    {% for ac in activity_categorties %}
+        <p>{{ ac }}</p>
+        {% for a in ac.activities %}
+            <p>{{ a }}</p>
+        {% endfor %}
+    {% endfor %}
 {% endblock %}
