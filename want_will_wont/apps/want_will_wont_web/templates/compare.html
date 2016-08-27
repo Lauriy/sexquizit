@@ -3,5 +3,60 @@
 {% load i18n %}
 
 {% block content %}
-    asdasdasd
+
+    <form id="generate-link">
+        <div>
+            <label>Secret 1</label>
+            <input autocomplete="off" type="text" id="secret1" value="{% if secret1 %}{{ secret1 }}{% endif %}" />
+        </div>
+
+        <div>
+            <label>Secret 2</label>
+            <input autocomplete="off" type="text" id="secret2" value="{% if secret2 %}{{ secret2 }}{% endif %}" />
+        </div>
+        <div>
+            <button type="submit">Generate link</button>
+        </div>
+    </form>
+
+    <div id="link" style="visibility: hidden;">
+        <h3>Link to results</h3>
+        <a href="#">#</a>
+    </div>
+
+    <script>
+        function generateLink() {
+            var secret1 = $("#secret1").val();
+            var secret2 = $("#secret2").val();
+
+            if (secret1 == null && secret2 == null) {
+                return;
+            }
+
+            var url = "/compare";
+            if (secret1) {
+                url += "/" + encodeURIComponent(secret1);
+            }
+            if (secret2) {
+                url += "/" + encodeURIComponent(secret2);
+            }
+
+            $("#link").css('visibility', 'visible');
+            $("#link a").attr('href', url);
+            $("#link a").text(url);
+        }
+
+        $(document).ready(function() {
+            generateLink();
+            $("#generate-link").submit(function(e) {
+                generateLink();
+                e.preventDefault();
+            });
+        });
+    </script>
+
+
 {% endblock %}
+
+
+

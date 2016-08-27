@@ -29,6 +29,10 @@ def answer(request, gender, secret2=None):
 
 def compare(request, secret1=None, secret2=None):
     answer_set_1 = None
+
+    print (secret1)
+    print (secret2)
+
     if secret1:
         answer_set_1 = get_object_or_404(AnswerSet, secret=secret1)
     context = {
@@ -36,6 +40,8 @@ def compare(request, secret1=None, secret2=None):
         'secret2': secret2,
         'answer_set_1': answer_set_1
     }
+
+
 
     return render_to_response('compare.html', RequestContext(request, context))
 

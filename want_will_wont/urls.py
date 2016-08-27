@@ -15,5 +15,7 @@ urlpatterns += i18n_patterns(
     url(r'^about/$', about, name='about'),
     url(r'^answer/(?P<gender>male|female)/$', answer, name='answer'),
     url(r'^answer/(?P<gender>male|female)/(?P<secret2>[\w-]+)/$', answer, name='answer_response'),
+    url(r'^compare$', compare, name='compare'),
+    url(r'^compare/(?P<secret1>[\w-]+)$', compare, name='compare'),
     url(r'^compare/(?P<secret1>[\w-]+)/(?P<secret2>[\w-]+)/$', compare, name='compare'),
 )
