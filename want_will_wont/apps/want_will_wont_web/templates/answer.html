@@ -3,10 +3,18 @@
 {% load i18n %}
 
 {% block content %}
-    {% for ac in activity_categorties %}
-        <p>{{ ac }}</p>
-        {% for a in ac.activities %}
-            <p>{{ a }}</p>
+    {#{% for ac in activity_categories.all %}#}
+    {#    <p><b>{{ ac.description }}</b></p>#}
+    {#    {% for a in ac.activities.all %}#}
+    {#        {% if a.shown_for_gender in allowed_genders %}#}
+    {#            <p>{{ a.description }}</p>#}
+    {#        {% endif %}#}
+    {#    {% endfor %}#}
+    {#{% endfor %}#}
+    <form method="POST" action="">
+        {% for field in form %}
+            <label>{{ field.label }}</label>
+            {{ field }}
         {% endfor %}
-    {% endfor %}
+    </form>
 {% endblock %}

@@ -5,11 +5,11 @@ from django.db.models import CASCADE, UUIDField, ForeignKey, Model, CharField, O
     PositiveSmallIntegerField
 from django.db.models.signals import post_save
 from django.utils.translation import ugettext_lazy as _
-from jsonfield import JSONField
 
 
 class ActivityCategory(Model):
     description = CharField(_('description'), max_length=255)
+    paired_with = ForeignKey('self', blank=True, null=True)
 
     def __str__(self):
         return '%s' % self.description
@@ -25,13 +25,16 @@ class Activity(Model):
         (MALE, _('male')),
         (BOTH, _('both'))
     )
-    category = ForeignKey(ActivityCategory, related_name='activities', verbose_name=_('category'), blank=True,
-                          null=True)
+    category = ForeignKey(ActivityCategory, related_name='activities', verbose_name=_('category'))
     description = CharField(_('description'), max_length=255)
     shown_for_gender = PositiveSmallIntegerField(_('shown for gender'), choices=GENDER_CHOICES, default=BOTH)
+    paired_with = ForeignKey('self', blank=True, null=True)
 
     def __str__(self):
-        return '%s' % self.description
+        if self.paired_with:
+            return '%s: %s, paired with %s' % (self.category.description, self.description, self.paired_with.description)
+
+        return '%s: %s' % (self.category.description, self.description,)
 
     class Meta:
         verbose_name_plural = _('activities')
@@ -60,8 +63,20 @@ post_save.connect(create_user_profile, sender=User, dispatch_uid='create_user_pr
 
 class AnswerSet(Model):
     profile = ForeignKey(Profile, null=True, blank=True, verbose_name=_('profile'))
-    answers = JSONField(_('answers'))
     secret = UUIDField(_('secret'), default=uuid.uuid4)
 
     def __str__(self):
         return '%s' % self.pk
+
+
+class Answer(Model):
+    WANT, WILL, WONT = range(3)
+    ANSWER_CHOICES = (
+        (WANT, _('want')),
+        (WILL, _('will')),
+        (WONT, _("won't"))
+    )
+    answer_set = ForeignKey(AnswerSet, related_name='answers')
+    profile = ForeignKey(Profile, null=True, blank=True, verbose_name=_('profile'))
+    activity = ForeignKey(Activity)
+    value = PositiveSmallIntegerField(choices=ANSWER_CHOICES)
