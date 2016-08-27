@@ -2,8 +2,6 @@
 
 {% load i18n %}
 
-
-
 {% block content %}
 
 
@@ -17,4 +15,11 @@
     </div>
 
 
+    <main class="inline-block-center mainrow">
+        <a href="{% url "answer" gender="male" %}" class="button answer">{% trans "Answer as Male" %}</a>
+        <a href="{% url "answer" gender="female" %}" class="button answer">{% trans "Answer as Female" %}</a>
+    </main>
+    <main class="flex-center">
+        <a href="{% url "compare" %}" class="button compare">{% trans "Compare your results" %}</a>
+    </main>
 {% endblock %}

@@ -174,3 +174,7 @@ LOGGING = {
         }
     }
 }
+
+FIXTURE_DIRS = (
+    '/want_will_wont_web/fixtures/',
+)
