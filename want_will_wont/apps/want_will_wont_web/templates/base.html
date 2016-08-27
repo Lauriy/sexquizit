@@ -13,49 +13,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
     {% compress js %}
+        <script src="{% static "js/vendor/jquery.js" %}"></script>
+    {% endcompress %}
+    {% compress js %}
         <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
     {% endcompress %}
     {% compress css %}
         <link rel="stylesheet" href="{% static "css/foundation.css" %}">
         <link rel="stylesheet" href="{% static "css/custom.css" %}">
+        <link rel="stylesheet" href="{% static "css/foundation_overwrite.css" %}">
     {% endcompress %}
 </head>
 <body>
-    <!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}<![endif]-->
-    <header class="header">
-        <a href="/" title="{% trans "Back to home page" %}">
-            <img class="logo" src="{% static "logo.png" %}" alt="{% trans "logo" %}">
-        </a>
-        <h1 class="headline">{% trans "Want Will Won't" %}</h1>
-        <ul class="header-subnav">
-            <li><a {% if is_home %}class="is-active" {% endif %}href="/">{% trans "Begin!" %}</a></li>
-            <li><a {% if is_about %}class="is-active" {% endif %}href="{% url "about" %}">{% trans "About" %}</a></li>
-            <li><a {% if is_contact %}class="is-active" {% endif %}href="{% url "contact" %}">{% trans "Contact" %}</a>
-            </li>
-        </ul>
-    </header>
-    {% block content %}{% endblock %}
-    <footer>
-        <main class="flex-center">
-            <p>
-                <small>{% trans "&copy; 2016 Want Will Won't" %}</small>
-            </p>
-        </main>
-    </footer>
-    {% compress js %}
-        <script src="{% static "js/vendor/jquery.js" %}"></script>
-        <script src="{% static "js/vendor/foundation.js" %}"></script>
-        <script src="{% static "js/vendor/what-input.js" %}"></script>
-        <script src="{% static "js/custom.js" %}"></script>
-    {% endcompress %}
-    <!-- Google Analytics: TODO: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src="//www.google-analytics.com/analytics.js";
-        r.parentNode.insertBefore(e,r)}(window,document,"script","ga"));
-        ga("create","UA-XXXXX-X","auto");ga("send","pageview");
-    </script>
+<!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}
+<![endif]-->
+<header class="header">
+    <img class="logo" src="{% static "logo.png" %}" alt="logo">
+    <h1 class="headline headname">{% trans "Want Will Won't" %}</h1>
+    <ul class="header-subnav">
+        <li><a {% if is_home %} class="is-active" {% endif %}href="/">{% trans "Begin!" %}</a></li>
+        <li><a {% if is_about %} class="is-active" {% endif %}href="{% url "about" %}">{% trans "About" %}</a></li>
+        <li><a {% if is_contact %} class="is-active" {% endif %}href="{% url "contact" %}">{% trans "Contact" %}</a>
+        </li>
+    </ul>
+</header>
+{% block content %}{% endblock %}
+<footer>
+    <div class="footer">
+            {% trans "&copy; 2016 Want Will Won't" %}
+    </div>
+</footer>
+{% compress js %}
+    <script src="{% static "js/vendor/jquery.js" %}"></script>
+    <script src="{% static "js/vendor/foundation.js" %}"></script>
+    <script src="{% static "js/vendor/what-input.js" %}"></script>
+    <script src="{% static "js/custom.js" %}"></script>
+{% endcompress %}
+<!-- Google Analytics: TODO: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = "//www.google-analytics.com/analytics.js";
+        r.parentNode.insertBefore(e, r)
+    }(window, document, "script", "ga"));
+    ga("create", "UA-XXXXX-X", "auto");
+    ga("send", "pageview");
+</script>
 </body>
 </html>
