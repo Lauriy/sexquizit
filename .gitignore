@@ -49,6 +49,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+/want_will_wont/settings/local.py
 
 # Sphinx documentation
 docs/_build/

@@ -1,4 +1,5 @@
-from django.shortcuts import get_object_or_404, render_to_response
+from django.core.urlresolvers import reverse
+from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
 
 from want_will_wont.apps.want_will_wont_web.forms import ResponseForm
@@ -24,14 +25,16 @@ def answer(request, gender, secret2=None):
     form = None
     if request.method == 'GET':
         form = ResponseForm(gender=gender)
+
     elif request.method == 'POST':
         form = ResponseForm(request.POST, gender=gender)
         if form.is_valid():
-            response = form.save()
+            answer_set = form.save()
+            return redirect(reverse('compare_1', kwargs={'pk1': answer_set.pk}))
+
     context['form'] = form
 
     return render_to_response('answer.html', RequestContext(request, context))
-
 
 def compare(request, pk1=None, pk2=None):
     analyse_results = None

@@ -20,19 +20,35 @@
                     {% if field.field.widget.attrs.category == category and field.field.widget.attrs.gender in allowed_genders %}
                         <tr>
                             <td><label for="id_{{ field.name }}">{{ field.label }}</label></td>
-                            <td><label class="control control--radio"><input type="radio" name="radio"/><div class="control__indicator"></div>
-                            <td><input id="id_{{ field.name }}_0" {% if field.value == 0 %}checked="checked"{% endif %}
-                                       type="radio" name="{{ field.name }}" value="0"></td>
-                            <td><input id="id_{{ field.name }}_1" {% if field.value == 1 %}checked="checked"{% endif %}
-                                       type="radio" name="{{ field.name }}" value="1"></td>
-                            <td><input id="id_{{ field.name }}_2" {% if field.value == 2 %}checked="checked"{% endif %}
-                                       type="radio" name="{{ field.name }}" value="2"></td>
+                            <td>
+                                <label class="control control--radio">
+                                    <input id="id_{{ field.name }}_0" {% if field.value == 0 %}checked="checked"{% endif %}
+                                       type="radio" name="{{ field.name }}" value="0" />
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+                           <td>
+                                <label class="control control--radio">
+                                    <input id="id_{{ field.name }}_1" {% if field.value == 1 %}checked="checked"{% endif %}
+                                       type="radio" name="{{ field.name }}" value="1" />
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
+                           <td>
+                                <label class="control control--radio">
+                                    <input id="id_{{ field.name }}_2" {% if field.value == 2 %}checked="checked"{% endif %}
+                                       type="radio" name="{{ field.name }}" value="2" />
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </td>
                         </tr>
                     {% endif %}
                 {% endfor %}
                 </tbody>
             {% endfor %}
         </table>
-        <input type="submit" value="{% trans "I'm done!" %}">
+        <div class="text-center">
+            <button type="submit" class="button" title="{% trans "Submit" %}">{% trans "I'm done!" %}</button>
+        </div>
     </form>
 {% endblock %}

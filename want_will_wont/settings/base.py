@@ -178,3 +178,7 @@ LOGGING = {
 FIXTURE_DIRS = (
     '/want_will_wont_web/fixtures/',
 )
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)

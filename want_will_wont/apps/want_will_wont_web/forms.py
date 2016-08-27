@@ -29,3 +29,5 @@ class ResponseForm(ModelForm):
                 activity_id = int(field_name.split('_')[1])
                 if answer_set and activity_id and field_value:
                     Answer(answer_set=answer_set, activity_id=activity_id, value=field_value).save()
+
+        return answer_set
