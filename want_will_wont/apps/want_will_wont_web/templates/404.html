@@ -1,5 +1,7 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% load i18n %}
 
 {% block main %}
-<p class="lead">Sorry, that page does not exist.</p>
+    <p class="lead">{% trans "Sorry, that page does not exist." %}</p>
 {% endblock %}

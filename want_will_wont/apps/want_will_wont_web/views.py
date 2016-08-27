@@ -7,8 +7,9 @@ from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCat
 
 
 def home(request):
-    context = {}
-
+    context = {
+        'is_home': True
+    }
     return render_to_response('home.html', RequestContext(request, context))
 
 
@@ -18,11 +19,17 @@ def answer(request, gender, secret2=None):
     else:
         allowed_genders = [Activity.FEMALE, Activity.BOTH]
     context = {
-        'allowed_genders': allowed_genders
+        'allowed_genders': allowed_genders,
+        'categories': ActivityCategory.objects.all()
     }
+    form = None
     if request.method == 'GET':
-        #context['activity_categories'] = ActivityCategory.objects.prefetch_related('activities')
-        context['form'] = ResponseForm(gender=gender)
+        form = ResponseForm(gender=gender)
+    elif request.mehotd == 'POST':
+        form = ResponseForm(request.POST, gender=gender)
+        if form.is_valid():
+            response = form.save()
+    context['form'] = form
 
     return render_to_response('answer.html', RequestContext(request, context))
 
@@ -52,3 +59,11 @@ def about(request):
     }
 
     return render_to_response('about.html', RequestContext(request, context))
+
+
+def contact(request):
+    context = {
+        'is_contact': True
+    }
+
+    return render_to_response('contact.html', RequestContext(request, context))

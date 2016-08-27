@@ -1,8 +1,3 @@
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
 .logo {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -55,3 +50,74 @@ body {
     background: rgba(250, 250, 250, 0.15);
     transition: all 0.35s ease-in-out;
 }
+
+.mainrow {
+    margin-top: 1.5rem;
+
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    background: #e5ecec;
+    font-size: 80%;
+}
+
+main div {
+    background: black;
+    color: white;
+    padding: 15px;
+    max-width: 125px;
+    margin: 5px;
+}
+
+.inline-block-center {
+    text-align: center;
+}
+
+.inline-block-center div {
+    display: inline-block;
+    text-align: left;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.answer {
+    background-color: #63c783;
+    width: 11rem;
+    height: 4.2rem;
+        margin-right: 0.6rem;
+    margin-left: 0.6rem;
+}
+
+.compare {
+    background-color: #8E6C88;
+    width: 16rem;
+    height:4.2rem;
+    line-height: 2.1rem;
+
+}
+
+.answer:hover, .answer:focus, .answer:hover, .answer:focus {
+    background-color: #3a8351;
+}
+
+.compare:hover, .compare:focus, .compare:hover, .compare:focus {
+    background-color: #603659;
+}
+
+.footer{
+  bottom: 0;
+    text-align: center;
+    width:100%;
+}
+
+
+

@@ -1,5 +1,7 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% load i18n %}
 
 {% block main %}
-<p class="lead">Sorry, you're not allowed to view that page.</p>
+    <p class="lead">{% trans "Sorry, you're not allowed to view that page." %}</p>
 {% endblock %}
