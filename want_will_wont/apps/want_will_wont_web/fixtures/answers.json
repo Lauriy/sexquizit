@@ -1,236 +1,74 @@
 [
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
+      "value": 2,
       "answer_set": 7,
-      "value": 1,
-      "activity": 11
-    },
-    "pk": 10
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
       "activity": 2
     },
+    "model": "want_will_wont_web.answer",
     "pk": 11
   },
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
-      "answer_set": 7,
-      "value": 0,
-      "activity": 4
-    },
-    "pk": 12
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
       "value": 1,
+      "answer_set": 7,
       "activity": 6
     },
+    "model": "want_will_wont_web.answer",
     "pk": 13
   },
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
-      "answer_set": 7,
       "value": 1,
-      "activity": 3
-    },
-    "pk": 14
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
       "answer_set": 7,
-      "value": 1,
-      "activity": 12
-    },
-    "pk": 15
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
       "activity": 8
     },
+    "model": "want_will_wont_web.answer",
     "pk": 16
   },
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
-      "answer_set": 7,
-      "value": 2,
-      "activity": 7
-    },
-    "pk": 17
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
-      "activity": 5
-    },
-    "pk": 18
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 2,
-      "activity": 1
-    },
-    "pk": 19
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
-      "activity": 14
-    },
-    "pk": 20
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
-      "activity": 9
-    },
-    "pk": 21
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 7,
-      "value": 1,
-      "activity": 10
-    },
-    "pk": 22
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
       "value": 0,
-      "activity": 4
-    },
-    "pk": 23
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
       "answer_set": 8,
-      "value": 1,
-      "activity": 10
-    },
-    "pk": 24
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 0,
-      "activity": 1
-    },
-    "pk": 25
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 2,
-      "activity": 3
-    },
-    "pk": 26
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 0,
-      "activity": 9
-    },
-    "pk": 27
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 1,
-      "activity": 5
-    },
-    "pk": 28
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 0,
       "activity": 13
     },
+    "model": "want_will_wont_web.answer",
     "pk": 29
   },
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
-      "answer_set": 8,
-      "value": 1,
-      "activity": 14
-    },
-    "pk": 30
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
       "value": 0,
-      "activity": 7
-    },
-    "pk": 31
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
       "answer_set": 8,
-      "value": 0,
-      "activity": 12
-    },
-    "pk": 32
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 0,
-      "activity": 11
-    },
-    "pk": 33
-  },
-  {
-    "model": "want_will_wont_web.answer",
-    "fields": {
-      "answer_set": 8,
-      "value": 0,
       "activity": 2
     },
+    "model": "want_will_wont_web.answer",
     "pk": 34
   },
   {
-    "model": "want_will_wont_web.answer",
     "fields": {
-      "answer_set": 8,
       "value": 0,
+      "answer_set": 8,
       "activity": 8
     },
+    "model": "want_will_wont_web.answer",
     "pk": 35
+  },
+  {
+    "fields": {
+      "value": 0,
+      "answer_set": 8,
+      "activity": 6
+    },
+    "model": "want_will_wont_web.answer",
+    "pk": 36
+  },
+  {
+    "fields": {
+      "value": 0,
+      "answer_set": 7,
+      "activity": 13
+    },
+    "model": "want_will_wont_web.answer",
+    "pk": 37
   }
 ]

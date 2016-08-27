@@ -1,4 +1,4 @@
-from django.forms import ModelForm, ChoiceField, RadioSelect
+from django.forms import ChoiceField, RadioSelect, ModelForm
 
 from want_will_wont.apps.want_will_wont_web.models import AnswerSet, Activity, Answer
 
