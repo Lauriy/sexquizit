@@ -14,6 +14,7 @@
     <link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
     {% compress js %}
         <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+        <script src="{% static "js/vendor/foundation.js" %}"></script>
     {% endcompress %}
     {% compress css %}
         <link rel="stylesheet" href="{% static "css/foundation.css" %}">
@@ -24,16 +25,22 @@
     <!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}<![endif]-->
     <header class="header">
         <img class="logo" src="{% static "logo.png" %}" alt="logo">
-        <h1 class="headline">Want Will Wont</h1>
+        <h1 class="headline">Want Will Won't</h1>
         <ul class="header-subnav">
-            <li><a href="#" {% if is_home %}class="is-active"{% endif %}>Begin!</a></li>
+            <li><a target="_self" {% if is_home %}class="is-active"{% endif %} href="{% url "home" %}">Begin!</a></li>
             <li><a target="_self" {% if is_about %}class="is-active"{% endif %} href="{% url "about" %}">About</a></li>
-            <li><a target="_self" href="./contact">Contact</a></li>
+            <li><a target="_self" {% if is_contact %}class="is-active"{% endif %} href="{% url "contact" %}">Contact</a></li>
+
         </ul>
     </header>
     {% block content %}{% endblock %}
     <footer>
-        <p><small>&copy; 2016 Want Will Won't</small></p>
+
+        <main class="flex-center">
+<p><small>&copy; 2016 Want Will Won't</small></p>
+</main>
+
+
     </footer>
     {% compress js %}
         <script src="{% static "js/main.js" %}"></script>

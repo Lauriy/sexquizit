@@ -7,8 +7,9 @@ from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCat
 
 
 def home(request):
-    context = {}
-
+    context = {
+        'is_home': True
+    }
     return render_to_response('home.html', RequestContext(request, context))
 
 
@@ -44,5 +45,11 @@ def about(request):
     context = {
         'is_about': True
     }
-
     return render_to_response('about.html', RequestContext(request, context))
+
+
+def contact (request):
+    context = {
+        'is_contact': True
+    }
+    return render_to_response('contact.html', RequestContext(request, context))

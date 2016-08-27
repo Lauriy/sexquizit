@@ -13,6 +13,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     url(r'^$', home, name='home'),
     url(r'^about/$', about, name='about'),
+    url(r'^contact/$', contact, name='contact'),
     url(r'^answer/(?P<gender>male|female)/$', answer, name='answer'),
     url(r'^answer/(?P<gender>male|female)/(?P<secret2>[\w-]+)/$', answer, name='answer_response'),
     url(r'^compare/(?P<secret1>[\w-]+)/(?P<secret2>[\w-]+)/$', compare, name='compare'),
