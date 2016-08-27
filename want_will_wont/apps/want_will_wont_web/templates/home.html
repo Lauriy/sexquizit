@@ -7,14 +7,14 @@
 {% block content %}
 
 
-    <main class="inline-block-center mainrow">
- <a href="answer.html" class="button answer">Answer as Male</a>
-  <a href="answer.html" class="button answer">Answer as Female</a>
-</main>
+    <div class="inline-block-center mainrow">
+        <a href="answer.html" class="button answer">Answer as Male</a>
+        <a href="answer.html" class="button answer">Answer as Female</a>
+    </div>
 
-<main class="flex-center">
-<a href="answer.html" class="button compare">Compare your results</a>
-</main>
+    <div class="flex-center">
+        <a href="{% url "compare" %}" class="button compare frontcompare">{% trans "Compare your results" %}</a>
+    </div>
 
 
 {% endblock %}

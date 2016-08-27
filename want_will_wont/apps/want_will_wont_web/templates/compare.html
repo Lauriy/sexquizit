@@ -5,24 +5,31 @@
 {% block content %}
 
     <form id="generate-link">
-        <div>
-            <label>Key 1</label>
-            <input autocomplete="off" type="text" id="pk1" value="{% if pk1 %}{{ pk1 }}{% endif %}" />
-        </div>
 
-        <div>
-            <label>Key 2</label>
-            <input autocomplete="off" type="text" id="pk2" value="{% if pk2 %}{{ pk2 }}{% endif %}" />
-        </div>
-        <div>
-            <button type="submit">Generate link</button>
+
+        <div class="row mainrow">
+            <div class="large-4 columns">
+                <input autocomplete="off" type="text" id="pk1" placeholder="Your Key"
+                       value="{% if pk1 %}{{ pk1 }}{% endif %}"/>
+            </div>
+            <div class="large-4 columns">
+                <input autocomplete="off" type="text" id="pk2" placeholder="Your Partner Key"
+                       value="{% if pk2 %}{{ pk2 }}{% endif %}"/>
+            </div>
+            <div class="large-4 columns">
+                <button class="compare" type="submit">Generate link</button>
+            </div>
+
         </div>
     </form>
 
-    <div id="link" style="visibility: hidden;">
-        <h3>Link to results</h3>
-        <a href="#">#</a>
+    <div class="row mainrow">
+            <h4>Link to results</h4>
+            <div id="link" style="visibility: hidden;">
+                <a href="#">#</a>
+            </div>
     </div>
+
 
     <script>
         function generateLink() {
@@ -46,9 +53,9 @@
             $("#link a").text(url);
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             generateLink();
-            $("#generate-link").submit(function(e) {
+            $("#generate-link").submit(function (e) {
                 generateLink();
                 e.preventDefault();
             });

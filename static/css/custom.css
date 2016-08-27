@@ -51,6 +51,10 @@
     transition: all 0.35s ease-in-out;
 }
 
+.headname {
+    margin-bottom: 0rem;
+}
+
 .mainrow {
     margin-top: 1.5rem;
 
@@ -93,16 +97,19 @@ main div {
     background-color: #63c783;
     width: 11rem;
     height: 4.2rem;
-        margin-right: 0.6rem;
+    margin-right: 0.6rem;
     margin-left: 0.6rem;
 }
 
 .compare {
     background-color: #8E6C88;
-    width: 16rem;
-    height:4.2rem;
-    line-height: 2.1rem;
 
+}
+
+.frontcompare {
+    width: 16rem;
+    height: 4.2rem;
+    line-height: 2.1rem;
 }
 
 .answer:hover, .answer:focus, .answer:hover, .answer:focus {
@@ -113,11 +120,9 @@ main div {
     background-color: #603659;
 }
 
-.footer{
-  bottom: 0;
+.footer {
+    bottom: 0;
     text-align: center;
-    width:100%;
+    width: 100%;
 }
-
-
 
