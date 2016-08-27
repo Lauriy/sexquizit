@@ -1,7 +1,5 @@
-import uuid
-
 from django.contrib.auth.models import User
-from django.db.models import CASCADE, UUIDField, ForeignKey, Model, CharField, OneToOneField, \
+from django.db.models import CASCADE, ForeignKey, Model, CharField, OneToOneField, \
     PositiveSmallIntegerField
 from django.db.models.signals import post_save
 from django.utils.translation import ugettext_lazy as _
@@ -32,7 +30,8 @@ class Activity(Model):
 
     def __str__(self):
         if self.paired_with:
-            return '%s: %s, paired with %s' % (self.category.description, self.description, self.paired_with.description)
+            return '%s: %s, paired with %s' % (self.category.description, self.description,
+                                               self.paired_with.description)
 
         return '%s: %s' % (self.category.description, self.description,)
 
@@ -62,9 +61,6 @@ post_save.connect(create_user_profile, sender=User, dispatch_uid='create_user_pr
 
 
 class AnswerSet(Model):
-    profile = ForeignKey(Profile, null=True, blank=True, verbose_name=_('profile'))
-    secret = UUIDField(_('secret'), default=uuid.uuid4)
-
     def __str__(self):
         return '%s' % self.pk
 
@@ -77,6 +73,8 @@ class Answer(Model):
         (WONT, _("won't"))
     )
     answer_set = ForeignKey(AnswerSet, related_name='answers')
-    profile = ForeignKey(Profile, null=True, blank=True, verbose_name=_('profile'))
     activity = ForeignKey(Activity)
     value = PositiveSmallIntegerField(choices=ANSWER_CHOICES)
+
+    def __str__(self):
+        return '%s - %s - %s' % (self.answer_set_id, self.activity, self.get_value_display())

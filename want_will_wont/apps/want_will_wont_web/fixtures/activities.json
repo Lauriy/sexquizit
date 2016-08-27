@@ -1,0 +1,170 @@
+[
+  {
+    "fields": {
+      "description_et": "Teise inimesega seksimas",
+      "description": "Having sex with another person",
+      "paired_with": 7,
+      "description_en": "Having sex with another person",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 1,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Masturbeerimas",
+      "description": "Masturbating",
+      "paired_with": 8,
+      "description_en": "Masturbating",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 2,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Lahti riietumas",
+      "description": "Undressing",
+      "paired_with": 9,
+      "description_en": "Undressing",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 3,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Teeb striptiisi",
+      "description": "Give a striptease",
+      "paired_with": 11,
+      "description_en": "Give a striptease",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 4,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Masseerib/katsub ennast",
+      "description": "Massage/touch themselves",
+      "paired_with": 12,
+      "description_en": "Massage/touch themselves",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 5,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Paneb n\u00e4ppu",
+      "description": "Finger themselves",
+      "paired_with": 13,
+      "description_en": "Finger themselves",
+      "category": 2,
+      "shown_for_gender": 1
+    },
+    "pk": 6,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Seksib kolmanda isikuga",
+      "description": "Having sex with another person",
+      "paired_with": 1,
+      "description_en": "Having sex with another person",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 7,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Masturbeerib",
+      "description": "Masturbate",
+      "paired_with": 2,
+      "description_en": "Masturbate",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 8,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Lahti riietub",
+      "description": "Undress",
+      "paired_with": 3,
+      "description_en": "Undress",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 9,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Poseerib",
+      "description": "Pose",
+      "paired_with": 14,
+      "description_en": "Pose",
+      "category": 2,
+      "shown_for_gender": 2
+    },
+    "pk": 10,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Striptiisi tegemas",
+      "description": "Striptease",
+      "paired_with": 4,
+      "description_en": "Striptease",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 11,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Masseerib/katsub ennast",
+      "description": "Massage/touch themselves",
+      "paired_with": 5,
+      "description_en": "Massage/touch themselves",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 12,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Endale n\u00e4ppu panemas",
+      "description": "Fingering yourself",
+      "paired_with": 6,
+      "description_en": "Fingering yourself",
+      "category": 1,
+      "shown_for_gender": 0
+    },
+    "pk": 13,
+    "model": "want_will_wont_web.activity"
+  },
+  {
+    "fields": {
+      "description_et": "Poseerimas",
+      "description": "Posing",
+      "paired_with": 10,
+      "description_en": "Posing",
+      "category": 1,
+      "shown_for_gender": 2
+    },
+    "pk": 14,
+    "model": "want_will_wont_web.activity"
+  }
+]

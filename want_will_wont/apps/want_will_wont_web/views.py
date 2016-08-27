@@ -1,4 +1,3 @@
-from django.db.models import Prefetch
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import RequestContext
 
@@ -26,7 +25,7 @@ def answer(request, gender, secret2=None):
     form = None
     if request.method == 'GET':
         form = ResponseForm(gender=gender)
-    elif request.mehotd == 'POST':
+    elif request.method == 'POST':
         form = ResponseForm(request.POST, gender=gender)
         if form.is_valid():
             response = form.save()

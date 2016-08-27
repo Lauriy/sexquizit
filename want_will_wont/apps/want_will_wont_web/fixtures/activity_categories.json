@@ -1,0 +1,22 @@
+[
+  {
+    "fields": {
+      "description_et": "Mu partner vaatab mind",
+      "description_en": "Being watched",
+      "description": "Being watched",
+      "paired_with": 2
+    },
+    "model": "want_will_wont_web.activitycategory",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "description_et": "Vaadata oma partnerit",
+      "description_en": "Watching your partner",
+      "description": "Watching your partner",
+      "paired_with": 1
+    },
+    "model": "want_will_wont_web.activitycategory",
+    "pk": 2
+  }
+]

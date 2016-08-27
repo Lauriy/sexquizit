@@ -1,8 +1,8 @@
-def analyse(answer_set_1, answer_set_2):
+def analyze(answer_set_1, answer_set_2):
 
     results = {}
 
-    for answer in answer_set_1.answers:
+    for answer in answer_set_1.answers.all():
         activity = answer.activity
         answer_match = find_answer_by_activity(activity.paired_with, answer_set_2.answers)
 
@@ -15,7 +15,7 @@ def analyse(answer_set_1, answer_set_2):
 
 
 def find_answer_by_activity(activity, answers):
-    for answer in answers:
+    for answer in answers.all():
         if answer.activity_id == activity.id:
            return answer
     return None
