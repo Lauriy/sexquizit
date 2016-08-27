@@ -4,7 +4,8 @@ from django.template import RequestContext
 from want_will_wont.apps.want_will_wont_web.forms import ResponseForm
 from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCategory, Activity
 
-from want_will_wont.apps.want_will_wont_web.analyzer import analyse
+from want_will_wont.apps.want_will_wont_web.analyzer import analyze
+
 
 def home(request):
     context = {
