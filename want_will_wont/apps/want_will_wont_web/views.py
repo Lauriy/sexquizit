@@ -34,17 +34,14 @@ def answer(request, gender, secret2=None):
     return render_to_response('answer.html', RequestContext(request, context))
 
 
-def compare(request, secret1=None, secret2=None):
+def compare(request, pk1=None, pk2=None):
     answer_set_1 = None
 
-    print (secret1)
-    print (secret2)
-
-    if secret1:
-        answer_set_1 = get_object_or_404(AnswerSet, secret=secret1)
+    if pk1:
+        answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
     context = {
-        'secret1': secret1,
-        'secret2': secret2,
+        'pk1': pk1,
+        'pk2': pk2,
         'answer_set_1': answer_set_1
     }
 

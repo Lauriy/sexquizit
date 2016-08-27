@@ -6,13 +6,13 @@
 
     <form id="generate-link">
         <div>
-            <label>Secret 1</label>
-            <input autocomplete="off" type="text" id="secret1" value="{% if secret1 %}{{ secret1 }}{% endif %}" />
+            <label>Key 1</label>
+            <input autocomplete="off" type="text" id="pk1" value="{% if pk1 %}{{ pk1 }}{% endif %}" />
         </div>
 
         <div>
-            <label>Secret 2</label>
-            <input autocomplete="off" type="text" id="secret2" value="{% if secret2 %}{{ secret2 }}{% endif %}" />
+            <label>Key 2</label>
+            <input autocomplete="off" type="text" id="pk2" value="{% if pk2 %}{{ pk2 }}{% endif %}" />
         </div>
         <div>
             <button type="submit">Generate link</button>
@@ -26,19 +26,19 @@
 
     <script>
         function generateLink() {
-            var secret1 = $("#secret1").val();
-            var secret2 = $("#secret2").val();
+            var pk1 = $("#pk1").val();
+            var pk2 = $("#pk2").val();
 
-            if (secret1 == null && secret2 == null) {
+            if (pk1 == null && pk2 == null) {
                 return;
             }
 
             var url = "/compare";
-            if (secret1) {
-                url += "/" + encodeURIComponent(secret1);
+            if (pk1) {
+                url += "/" + encodeURIComponent(pk1);
             }
-            if (secret2) {
-                url += "/" + encodeURIComponent(secret2);
+            if (pk2) {
+                url += "/" + encodeURIComponent(pk2);
             }
 
             $("#link").css('visibility', 'visible');
