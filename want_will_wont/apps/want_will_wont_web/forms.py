@@ -22,3 +22,4 @@ class ResponseForm(ModelForm):
                                                                    widget=RadioSelect(renderer=HorizontalRadioRenderer),
                                                                    choices=Answer.ANSWER_CHOICES)
             self.fields['activity_%d' % activity.pk].widget.attrs['category'] = activity.category
+            self.fields['activity_%d' % activity.pk].widget.attrs['gender'] = activity.shown_for_gender

@@ -12,9 +12,15 @@
     {#    {% endfor %}#}
     {#{% endfor %}#}
     <form method="POST" action="">
-        {% for field in form %}
-            <label>{{ field.label }}</label>
-            {{ field }}
+        {% csrf_token %}
+        {% for category in categories %}
+            <p><b>{{ category }}</b></p>
+            {% for field in form %}
+                {% if field.field.widget.attrs.category == category and field.field.widget.attrs.gender in allowed_genders %}
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
     </form>
 {% endblock %}

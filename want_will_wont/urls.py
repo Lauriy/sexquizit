@@ -2,7 +2,7 @@ from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 
-from want_will_wont.apps.want_will_wont_web.views import home, answer, compare, about
+from want_will_wont.apps.want_will_wont_web.views import home, answer, compare, about, contact
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
