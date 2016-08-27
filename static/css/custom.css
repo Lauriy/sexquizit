@@ -113,5 +113,11 @@ main div {
     background-color: #603659;
 }
 
+.footer{
+  bottom: 0;
+    text-align: center;
+    width:100%;
+}
+
 
 
