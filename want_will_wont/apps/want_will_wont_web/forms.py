@@ -1,6 +1,6 @@
 from django.forms import ChoiceField, RadioSelect, ModelForm
 
-from want_will_wont.apps.want_will_wont_web.models import AnswerSet, Activity, Answer
+from want_will_wont.apps.want_will_wont_web.models import AnswerSet, Activity, Answer, Email
 
 
 class ResponseForm(ModelForm):
@@ -31,3 +31,9 @@ class ResponseForm(ModelForm):
                     Answer(answer_set=answer_set, activity_id=activity_id, value=field_value).save()
 
         return answer_set
+
+
+class EmailSignupForm(ModelForm):
+    class Meta:
+        model = Email
+        fields = ('email',)
