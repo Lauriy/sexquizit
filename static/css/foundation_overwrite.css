@@ -52,8 +52,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 
 .control__indicator {
     position: absolute;
-    top: 2px;
-    left: 0;
+    top: -7px;
+    left: 10px;
     width: 30px;
     height: 30px;
     background: #e6e6e6;
@@ -70,14 +70,36 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 }
 
 /* Checked state */
-.control input:checked ~ .control__indicator {
-    background: #2aa1c0;
+.control input:checked ~ .control__indicator.red {
+    background: #c02a2a;
 }
 
 /* Hover state whilst checked */
-.control:hover input:not([disabled]):checked ~ .control__indicator,
-.control input:checked:focus ~ .control__indicator {
-    background: #0e647d;
+.control:hover input:not([disabled]):checked ~ .control__indicator.red,
+.control input:checked:focus ~ .control__indicator.red {
+    background: #7d0e0e;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator.yellow {
+    background: #fff000;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator.yellow,
+.control input:checked:focus ~ .control__indicator.yellow {
+    background: #ffb500;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator.green {
+    background: #00ff3c;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator.green,
+.control input:checked:focus ~ .control__indicator.green {
+    background: #069000;
 }
 
 /* Disabled state */
@@ -138,4 +160,12 @@ table tr th, table tr td {
 
 table thead tr th, table thead tr td {
     font-size: 1.175rem;
+}
+
+table tr th, table tr td {
+    padding: 0.8rem 0.625rem;
+}
+
+table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+    line-height: 1.7rem;
 }
