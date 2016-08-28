@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-27 21:36+0000\n"
-"PO-Revision-Date: 2016-08-27 21:45+0000\n"
+"POT-Creation-Date: 2016-08-28 11:07+0000\n"
+"PO-Revision-Date: 2016-08-28 11:08+0000\n"
 "Last-Translator: b'  <laurileet@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -29,12 +29,12 @@ msgid "activity categories"
 msgstr "tegevuste kategooriad"
 
 #: want_will_wont/apps/want_will_wont_web/models.py:22
-#: want_will_wont/apps/want_will_wont_web/models.py:45
+#: want_will_wont/apps/want_will_wont_web/models.py:41
 msgid "female"
 msgstr "naine"
 
 #: want_will_wont/apps/want_will_wont_web/models.py:23
-#: want_will_wont/apps/want_will_wont_web/models.py:46
+#: want_will_wont/apps/want_will_wont_web/models.py:42
 msgid "male"
 msgstr "mees"
 
@@ -50,25 +50,29 @@ msgstr "kategooria"
 msgid "shown for gender"
 msgstr "näita soole"
 
-#: want_will_wont/apps/want_will_wont_web/models.py:39
+#: want_will_wont/apps/want_will_wont_web/models.py:35
 msgid "activities"
 msgstr "tegevused"
 
-#: want_will_wont/apps/want_will_wont_web/models.py:48
+#: want_will_wont/apps/want_will_wont_web/models.py:44
 msgid "user"
 msgstr "kasutaja"
 
-#: want_will_wont/apps/want_will_wont_web/models.py:71
+#: want_will_wont/apps/want_will_wont_web/models.py:67
 msgid "want"
 msgstr "tahan"
 
-#: want_will_wont/apps/want_will_wont_web/models.py:72
+#: want_will_wont/apps/want_will_wont_web/models.py:68
 msgid "will"
 msgstr "võin"
 
-#: want_will_wont/apps/want_will_wont_web/models.py:73
+#: want_will_wont/apps/want_will_wont_web/models.py:69
 msgid "won't"
 msgstr "ei taha"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:80
+msgid "e-mail"
+msgstr "e-post"
 
 #: want_will_wont/apps/want_will_wont_web/templates/403.html:6
 msgid "Sorry, you're not allowed to view that page."
@@ -78,13 +82,15 @@ msgstr "Vabandame, ligipääs sellele lehele on keelatud."
 msgid "Sorry, that page does not exist."
 msgstr "Vabandame, lehekülge ei leitud."
 
-#: want_will_wont/apps/want_will_wont_web/templates/about.html:8
+#: want_will_wont/apps/want_will_wont_web/templates/about.html:7
 msgid ""
 "\n"
 "                This is a hackathon project made at <a target=\"_blank\" href=\"http://digix.eu/loomehakk-vol-2/\" title=\"Loomehäkk\">Loomehäkk</a>\n"
 "                by Mikk Oad, Tanel Hiob and Lauri Elias.\n"
 "            "
 msgstr ""
+"\n"
+"See on <a target=\"_blank\" href=\"http://digix.eu/loomehakk-vol-2/\" title=\"Loomehäkk\">Loomehäkil</a> tehtud projekt. Autorid: Mikk Oad, Tanel Hiob and Lauri Elias."
 
 #: want_will_wont/apps/want_will_wont_web/templates/answer.html:13
 msgid "Want"
@@ -107,46 +113,50 @@ msgid "I'm done!"
 msgstr "Valmis!"
 
 #: want_will_wont/apps/want_will_wont_web/templates/base.html:11
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:30
-msgid "Want Will Won't"
+msgid "SexQuiz.it"
 msgstr ""
 
 #: want_will_wont/apps/want_will_wont_web/templates/base.html:12
 msgid "Find out what your partner likes sexually - you may be surprised."
-msgstr ""
+msgstr "Avasta oma partnerit - võid saada üllatuse osaliseks."
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:25
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:32
 msgid ""
 "<p class=\"browserupgrade\">You are using an <strong>outdated</strong> "
 "browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a>"
 " to improve your experience.</p>"
 msgstr ""
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:27
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:36
 msgid "Back to home page"
 msgstr "Tagasi kodulehele"
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:28
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:37
 msgid "logo"
 msgstr "logo"
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:32
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:38
+#| msgid "logo"
+msgid "logo text"
+msgstr "logo tekst"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:42
 msgid "Begin!"
 msgstr "Alusta!"
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:33
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:43
 msgid "About"
 msgstr "Projektist"
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:34
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:44
 msgid "Contact"
 msgstr "Kontakt"
 
-#: want_will_wont/apps/want_will_wont_web/templates/base.html:38
-msgid "&copy; 2016 Want Will Won't"
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:52
+msgid "&copy; 2016 SexQuiz.it"
 msgstr ""
 
-#: want_will_wont/apps/want_will_wont_web/templates/contact.html:6
+#: want_will_wont/apps/want_will_wont_web/templates/contact.html:7
 msgid "contact"
 msgstr "kontakt"
 
@@ -161,6 +171,18 @@ msgstr "Vasta naisena"
 #: want_will_wont/apps/want_will_wont_web/templates/home.html:13
 msgid "Compare your results"
 msgstr "Võrdle tulemusi"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:27
+msgid "Drop us your address to hear more once we've had time to perfect"
+msgstr "Jäta meile oma kontakt, anname teada, kui asjad edenevad"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:28
+msgid "E-mail"
+msgstr "E-post"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:32
+msgid "Yeah, sure"
+msgstr "Miks ka mitte"
 
 #: want_will_wont/settings/base.py:84
 msgid "English"
