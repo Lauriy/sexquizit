@@ -24,6 +24,7 @@
 <body>
 <!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}
 <![endif]-->
+<div class="wrapper">
 <header class="header">
     <a href="/" title="{% trans "Back to home page" %}">
         <img class="logo" src="{% static "logo_icon.png" %}" alt="{% trans "logo" %}"><br>
@@ -37,7 +38,10 @@
         </li>
     </ul>
 </header>
+
 {% block content %}{% endblock %}
+<div class="push"></div>
+</div>
 <footer>
     <div class="footer">{% trans "&copy; 2016 Want Will Won't" %}</div>
 </footer>
