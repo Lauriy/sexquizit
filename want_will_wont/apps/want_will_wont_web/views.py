@@ -5,7 +5,7 @@ from django.template import RequestContext
 from want_will_wont.apps.want_will_wont_web.forms import ResponseForm
 from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCategory, Activity
 
-
+from want_will_wont.apps.want_will_wont_web.analyzer import analyze
 
 def home(request):
     context = {
@@ -38,15 +38,16 @@ def answer(request, gender, secret2=None):
     return render_to_response('answer.html', RequestContext(request, context))
 
 def compare(request, pk1=None, pk2=None):
-    analyse_results = None
+    analyze_results = None
     if pk1 and pk2:
-        answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
-        answer_set_2 = get_object_or_404(AnswerSet, pk=pk2)
+        #answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
+        #answer_set_2 = get_object_or_404(AnswerSet, pk=pk2)
+        analyze_results = analyze(None, None)
 
     context = {
         'pk1': pk1,
         'pk2': pk2,
-        'analyse_results': analyse_results
+        'analyze_results': analyze_results
     }
 
     return render_to_response('compare.html', RequestContext(request, context))
