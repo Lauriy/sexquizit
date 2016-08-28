@@ -15,7 +15,7 @@ def analyze(answer_set_1=None, answer_set_2=None):
                 continue
 
             result = max(answer1.value, answer_match.value)
-            
+
             if result == 0:
                 if activity.category.description not in results['green']:
                     results['green'][activity.category.description] = []
