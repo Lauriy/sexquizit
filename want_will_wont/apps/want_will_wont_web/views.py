@@ -47,6 +47,7 @@ def compare(request, pk1=None, pk2=None):
         answer_set_1 = AnswerSet.objects.filter(pk=pk1).prefetch_related('answers').first()
         answer_set_2 = AnswerSet.objects.filter(pk=pk2).prefetch_related('answers').first()
         analyze_results = analyze(answer_set_1, answer_set_2)
+        print(analyze_results)
 
     context = {
         'pk1': pk1,
