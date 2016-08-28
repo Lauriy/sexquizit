@@ -1,4 +1,4 @@
-from django.forms import ModelForm, ChoiceField, RadioSelect
+from django.forms import ChoiceField, RadioSelect, ModelForm
 
 from want_will_wont.apps.want_will_wont_web.models import AnswerSet, Activity, Answer
 
@@ -29,3 +29,5 @@ class ResponseForm(ModelForm):
                 activity_id = int(field_name.split('_')[1])
                 if answer_set and activity_id and field_value:
                     Answer(answer_set=answer_set, activity_id=activity_id, value=field_value).save()
+
+        return answer_set

@@ -11,6 +11,7 @@
     overflow: visible;
     padding-top: 1rem;
     padding-bottom: 3.9rem;
+    margin-bottom: 1.5rem;
 }
 
 .header .headline {
@@ -55,11 +56,6 @@
     margin-bottom: 0rem;
 }
 
-.mainrow {
-    margin-top: 1.5rem;
-
-}
-
 .center {
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +63,7 @@
 }
 
 body {
-    background: #e5ecec;
+    background: #fbfbfb;
     font-size: 80%;
 }
 
@@ -81,11 +77,14 @@ main div {
 
 .inline-block-center {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .inline-block-center div {
     display: inline-block;
     text-align: left;
+
 }
 
 .flex-center {
@@ -125,4 +124,5 @@ main div {
     text-align: center;
     width: 100%;
 }
+
 

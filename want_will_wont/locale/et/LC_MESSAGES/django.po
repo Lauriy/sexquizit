@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-27 21:36+0000\n"
+"PO-Revision-Date: 2016-08-27 21:45+0000\n"
+"Last-Translator: b'  <laurileet@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.7.12\n"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:9
+#: want_will_wont/apps/want_will_wont_web/models.py:27
+msgid "description"
+msgstr "kirjeldus"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:16
+msgid "activity categories"
+msgstr "tegevuste kategooriad"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:22
+#: want_will_wont/apps/want_will_wont_web/models.py:45
+msgid "female"
+msgstr "naine"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:23
+#: want_will_wont/apps/want_will_wont_web/models.py:46
+msgid "male"
+msgstr "mees"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:24
+msgid "both"
+msgstr "mõlemad"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:26
+msgid "category"
+msgstr "kategooria"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:28
+msgid "shown for gender"
+msgstr "näita soole"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:39
+msgid "activities"
+msgstr "tegevused"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:48
+msgid "user"
+msgstr "kasutaja"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:71
+msgid "want"
+msgstr "tahan"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:72
+msgid "will"
+msgstr "võin"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:73
+msgid "won't"
+msgstr "ei taha"
+
+#: want_will_wont/apps/want_will_wont_web/templates/403.html:6
+msgid "Sorry, you're not allowed to view that page."
+msgstr "Vabandame, ligipääs sellele lehele on keelatud."
+
+#: want_will_wont/apps/want_will_wont_web/templates/404.html:6
+msgid "Sorry, that page does not exist."
+msgstr "Vabandame, lehekülge ei leitud."
+
+#: want_will_wont/apps/want_will_wont_web/templates/about.html:8
+msgid ""
+"\n"
+"                This is a hackathon project made at <a target=\"_blank\" href=\"http://digix.eu/loomehakk-vol-2/\" title=\"Loomehäkk\">Loomehäkk</a>\n"
+"                by Mikk Oad, Tanel Hiob and Lauri Elias.\n"
+"            "
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:13
+msgid "Want"
+msgstr "Tahan"
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:14
+msgid "Will"
+msgstr "Võin"
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:15
+msgid "Won't"
+msgstr "Ei taha"
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:51
+msgid "Submit"
+msgstr "Saada"
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:51
+msgid "I'm done!"
+msgstr "Valmis!"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:11
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:30
+msgid "Want Will Won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:12
+msgid "Find out what your partner likes sexually - you may be surprised."
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:25
+msgid ""
+"<p class=\"browserupgrade\">You are using an <strong>outdated</strong> "
+"browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a>"
+" to improve your experience.</p>"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:27
+msgid "Back to home page"
+msgstr "Tagasi kodulehele"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:28
+msgid "logo"
+msgstr "logo"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:32
+msgid "Begin!"
+msgstr "Alusta!"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:33
+msgid "About"
+msgstr "Projektist"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:34
+msgid "Contact"
+msgstr "Kontakt"
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:38
+msgid "&copy; 2016 Want Will Won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/contact.html:6
+msgid "contact"
+msgstr "kontakt"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:9
+msgid "Answer as Male"
+msgstr "Vasta mehena"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:10
+msgid "Answer as Female"
+msgstr "Vasta naisena"
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:13
+msgid "Compare your results"
+msgstr "Võrdle tulemusi"
+
+#: want_will_wont/settings/base.py:84
+msgid "English"
+msgstr "inglise"
+
+#: want_will_wont/settings/base.py:85
+msgid "Estonian"
+msgstr "eesti"

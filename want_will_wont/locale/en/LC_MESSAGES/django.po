@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-27 21:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: want_will_wont/apps/want_will_wont_web/models.py:9
+#: want_will_wont/apps/want_will_wont_web/models.py:27
+msgid "description"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:16
+msgid "activity categories"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:22
+#: want_will_wont/apps/want_will_wont_web/models.py:45
+msgid "female"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:23
+#: want_will_wont/apps/want_will_wont_web/models.py:46
+msgid "male"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:24
+msgid "both"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:26
+msgid "category"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:28
+msgid "shown for gender"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:39
+msgid "activities"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:48
+msgid "user"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:71
+msgid "want"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:72
+msgid "will"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/models.py:73
+msgid "won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/403.html:6
+msgid "Sorry, you're not allowed to view that page."
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/404.html:6
+msgid "Sorry, that page does not exist."
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/about.html:8
+msgid ""
+"\n"
+"                This is a hackathon project made at <a target=\"_blank\" "
+"href=\"http://digix.eu/loomehakk-vol-2/\" title=\"Loomehäkk\">Loomehäkk</a>\n"
+"                by Mikk Oad, Tanel Hiob and Lauri Elias.\n"
+"            "
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:13
+msgid "Want"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:14
+msgid "Will"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:15
+msgid "Won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:51
+msgid "Submit"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/answer.html:51
+msgid "I'm done!"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:11
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:30
+msgid "Want Will Won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:12
+msgid "Find out what your partner likes sexually - you may be surprised."
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:25
+msgid ""
+"<p class=\"browserupgrade\">You are using an <strong>outdated</strong> "
+"browser. Please <a href=\"http://browsehappy.com/\">upgrade your browser</a> "
+"to improve your experience.</p>"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:27
+msgid "Back to home page"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:28
+msgid "logo"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:32
+msgid "Begin!"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:33
+msgid "About"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:34
+msgid "Contact"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/base.html:38
+msgid "&copy; 2016 Want Will Won't"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/contact.html:6
+msgid "contact"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:9
+msgid "Answer as Male"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:10
+msgid "Answer as Female"
+msgstr ""
+
+#: want_will_wont/apps/want_will_wont_web/templates/home.html:13
+msgid "Compare your results"
+msgstr ""
+
+#: want_will_wont/settings/base.py:84
+msgid "English"
+msgstr ""
+
+#: want_will_wont/settings/base.py:85
+msgid "Estonian"
+msgstr ""

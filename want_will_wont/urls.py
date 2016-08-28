@@ -1,6 +1,7 @@
-from django.conf.urls import include, url
+from django.conf.urls import include, url, patterns
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from django.conf import settings
 
 from want_will_wont.apps.want_will_wont_web.views import home, answer, compare, about, contact
 
@@ -20,3 +21,6 @@ urlpatterns += i18n_patterns(
     url(r'^compare/(?P<pk1>\d+)/$', compare, name='compare_1'),
     url(r'^compare/(?P<pk1>\d+)/(?P<pk2>\d+)/$', compare, name='compare_1_2'),
 )
+
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += patterns('', url(r'^rosetta/', include('rosetta.urls')), )
