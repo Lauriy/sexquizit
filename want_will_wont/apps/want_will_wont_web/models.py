@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db.models import CASCADE, ForeignKey, Model, CharField, OneToOneField, \
-    PositiveSmallIntegerField
+    PositiveSmallIntegerField, EmailField
 from django.db.models.signals import post_save
 from django.utils.translation import ugettext_lazy as _
 
@@ -74,3 +74,10 @@ class Answer(Model):
 
     def __str__(self):
         return '%s - %s - %s' % (self.answer_set_id, self.activity, self.get_value_display())
+
+
+class Email(Model):
+    email = EmailField(_('e-mail'), unique=True)
+
+    def __str__(self):
+        return '%s' % self.email

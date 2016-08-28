@@ -17,8 +17,6 @@ class ProcurementBiddingTests(TransactionTestCase):
         answer_set_2 = AnswerSet.objects.get(pk=8)
         result = analyze(answer_set_1, answer_set_2)
 
-        print(result)
-
         self.assertIsNotNone(result)
 
         # TODO: Add correct expected result and assert analyzer knows how to generate it

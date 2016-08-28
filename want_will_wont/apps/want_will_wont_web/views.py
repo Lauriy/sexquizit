@@ -1,8 +1,9 @@
+from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, render_to_response, redirect
 from django.template import RequestContext
 
-from want_will_wont.apps.want_will_wont_web.forms import ResponseForm
+from want_will_wont.apps.want_will_wont_web.forms import ResponseForm, EmailSignupForm
 from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCategory, Activity
 
 from want_will_wont.apps.want_will_wont_web.analyzer import analyze
@@ -12,6 +13,12 @@ def home(request):
     context = {
         'is_home': True
     }
+    if request.method == 'POST':
+        form = EmailSignupForm(request.POST)
+        if form.is_valid():
+            messages.success(request, 'E-mail saved. Thanks!')
+            form.save()
+
     return render_to_response('home.html', RequestContext(request, context))
 
 
@@ -42,12 +49,9 @@ def answer(request, gender, secret2=None):
 def compare(request, pk1=None, pk2=None):
     analyze_results = None
     if pk1 and pk2:
-        # answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
-        # answer_set_2 = get_object_or_404(AnswerSet, pk=pk2)
         answer_set_1 = AnswerSet.objects.filter(pk=pk1).prefetch_related('answers').first()
         answer_set_2 = AnswerSet.objects.filter(pk=pk2).prefetch_related('answers').first()
         analyze_results = analyze(answer_set_1, answer_set_2)
-        print(analyze_results)
 
     context = {
         'pk1': pk1,

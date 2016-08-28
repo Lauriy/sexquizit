@@ -12,4 +12,24 @@
     <div class="flex-center">
         <a href="{% url "compare" %}" class="button compare frontcompare">{% trans "Compare your results" %}</a>
     </div>
+    <div class="flex-center">
+        <form class="text-center" action="" method="post">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% csrf_token %}
+            <div class="row">
+                <div class="large-12 columns">
+                    <label for="loomehakk-email-signup">{% trans "Drop us your address to hear more once we've had time to perfect" %}
+                        <input id="loomehakk-email-signup" name="email" type="text" placeholder="{% trans "E-mail" %}"/>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="button">{% trans "Yeah, sure" %}</button>
+        </form>
+    </div>
 {% endblock %}
