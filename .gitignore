@@ -58,3 +58,8 @@ target/
 
 # PyCharm IDE
 .idea
+
+# Visual Studio
+/bin
+/.vs
+/obj
