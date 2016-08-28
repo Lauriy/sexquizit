@@ -182,3 +182,13 @@ height: 4em;
 .comparetable{
     margin-top: 1.3rem;
 }
+
+.emailbox{
+    max-width: 23rem;
+    margin-top:0.7rem;
+}
+
+.maillabel{
+    margin-top:0.3rem;
+    margin-bottom:0.5rem;
+}

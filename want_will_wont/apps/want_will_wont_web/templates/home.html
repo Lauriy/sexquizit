@@ -23,8 +23,8 @@
             {% endif %}
             {% csrf_token %}
             <div class="row">
-                <div class="large-12 columns">
-                    <label for="loomehakk-email-signup">{% trans "Drop us your address to hear more once we've had time to perfect" %}
+                <div class="large-12 columns emailbox">
+                    <div class="maillabel"><h6>{% trans "Drop us Your e-mail to hear more about us:" %}</h6></div>
                         <input id="loomehakk-email-signup" name="email" type="text" placeholder="{% trans "E-mail" %}"/>
                     </label>
                 </div>
