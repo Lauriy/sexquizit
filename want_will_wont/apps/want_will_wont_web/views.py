@@ -7,6 +7,7 @@ from want_will_wont.apps.want_will_wont_web.models import AnswerSet, ActivityCat
 
 from want_will_wont.apps.want_will_wont_web.analyzer import analyze
 
+
 def home(request):
     context = {
         'is_home': True
@@ -37,12 +38,16 @@ def answer(request, gender, secret2=None):
 
     return render_to_response('answer.html', RequestContext(request, context))
 
+
 def compare(request, pk1=None, pk2=None):
     analyze_results = None
     if pk1 and pk2:
-        #answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
-        #answer_set_2 = get_object_or_404(AnswerSet, pk=pk2)
-        analyze_results = analyze(None, None)
+        # answer_set_1 = get_object_or_404(AnswerSet, pk=pk1)
+        # answer_set_2 = get_object_or_404(AnswerSet, pk=pk2)
+        answer_set_1 = AnswerSet.objects.filter(pk=pk1).prefetch_related('answers').first()
+        answer_set_2 = AnswerSet.objects.filter(pk=pk2).prefetch_related('answers').first()
+        analyze_results = analyze(answer_set_1, answer_set_2)
+        print(analyze_results)
 
     context = {
         'pk1': pk1,

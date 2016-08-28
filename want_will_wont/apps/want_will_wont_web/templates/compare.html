@@ -51,21 +51,35 @@
 {% if analyze_results != None %}
 	test
 	<table>
+        <thead>
+            <tr>
+                <td></td>
+                <td>{{ pk1 }}</td>
+                <td>{{ pk2 }}</td>
+            </tr>
+        </thead>
+        <tbody>
+
+
 		{% for color, categories in analyze_results.items %}
-			<tbody style="background-color: {{color}};">
-				{% for category, results in categories.items %}
-					<tr>
-						<td colspan="2">{{category}}</td>
-					</tr>
-					{% for result in results %}
-						<tr>
-							<td>{{result.name_pk1}}</td>
-							<td>{{result.name_pk2}}</td>
-						</tr>
-					{% endfor %}
-				{% endfor %}
-			</tbody>
+            {% for category, results in categories.items %}
+                <tr style="background-color: {{ color }};">
+                    <td>{{category}}</td>
+                    {% for each in results|slice:":1" %}
+                        <td>{{ each.first }}</td>
+                        <td>{{ each.second }}</td>
+                    {% endfor %}
+                </tr>
+                {% for each in results|slice:"1:" %}
+                    <tr style="background-color: {{ color }};">
+                        <td></td>
+                        <td>{{ each.first }}</td>
+                        <td>{{ each.second }}</td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
 		{% endfor %}
+        </tbody>
 	</table>
 {% endif %}
 
