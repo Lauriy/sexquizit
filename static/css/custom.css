@@ -150,3 +150,35 @@ margin: 0 auto -4em;
 .footer, .push {
 height: 4em;
 }
+
+.comparebox{
+    max-width:15rem;
+    padding-top: 0.2rem!important;
+}
+
+.square{
+    width: 25px;
+    height: 25px;
+    margin: 0.5rem;
+    display:inline-flex;
+}
+
+.square.green {
+	background: #a7ffbc;
+}
+
+.square.yellow{
+    background: #fff88f;
+}
+
+.square.red{
+    background: #ff8a8a;
+}
+
+.colortext{
+    margin-top: 0.65rem;
+}
+
+.comparetable{
+    margin-top: 1.3rem;
+}

@@ -169,3 +169,11 @@ table tr th, table tr td {
 table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
     line-height: 1.7rem;
 }
+
+input[type="text"]{
+    display:inline-table;
+}
+
+table.comparetable tr.even, table.comparetable tr.alt, table.comparetable tr:nth-of-type(even) {
+    background: none;
+}
