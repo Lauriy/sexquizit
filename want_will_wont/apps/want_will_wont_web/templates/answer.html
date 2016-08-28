@@ -10,9 +10,9 @@
                 <thead>
                 <tr>
                     <th>{{ category.description }}</th>
-                    <th width="10rem">{% trans "Want" %}</th>
-                    <th width="10rem">{% trans "Will" %}</th>
-                    <th width="10rem">{% trans "Won't" %}</th>
+                    <th class="radiotable">{% trans "Want" %}</th>
+                    <th class="radiotable">{% trans "Will" %}</th>
+                    <th class="radiotable">{% trans "Won't" %}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,21 +24,21 @@
                                 <label class="control control--radio">
                                     <input id="id_{{ field.name }}_0" {% if field.value == 0 %}checked="checked"{% endif %}
                                        type="radio" name="{{ field.name }}" value="0" />
-                                    <div class="control__indicator"></div>
+                                    <div class="control__indicator green"></div>
                                 </label>
                             </td>
                            <td>
                                 <label class="control control--radio">
                                     <input id="id_{{ field.name }}_1" {% if field.value == 1 %}checked="checked"{% endif %}
                                        type="radio" name="{{ field.name }}" value="1" />
-                                    <div class="control__indicator"></div>
+                                    <div class="control__indicator yellow"></div>
                                 </label>
                             </td>
                            <td>
                                 <label class="control control--radio">
                                     <input id="id_{{ field.name }}_2" {% if field.value == 2 %}checked="checked"{% endif %}
                                        type="radio" name="{{ field.name }}" value="2" />
-                                    <div class="control__indicator"></div>
+                                    <div class="control__indicator red"></div>
                                 </label>
                             </td>
                         </tr>

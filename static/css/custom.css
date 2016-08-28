@@ -125,4 +125,11 @@ main div {
     width: 100%;
 }
 
+.logotext{
+    padding:0.7rem;
+}
 
+.radiotable{
+    min-width:4rem;
+    text-align:center;
+}
