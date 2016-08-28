@@ -1,4 +1,21 @@
+from collections import OrderedDict
+
 def analyze(answer_set_1, answer_set_2):
+
+    return OrderedDict({
+        "green": {
+            "sex": [{"name_pk1": "esimene küsimus", "name_pk2": "esimene paar"}],
+            "muu": [{"name_pk1": "teine küsimus", "name_pk2": "teine paar"}],
+        },
+        "yellow": {
+            "sex": [{"name_pk1": "kolmas küsimus", "name_pk2": "kolmas paar"}],
+            "muu": [{"name_pk1": "neljas küsimus", "name_pk2": "neljas paar"}],
+        },
+        "red": {
+            "sex": [{"name_pk1": "viies küsimus", "name_pk2": "viies paar"}],
+            "muu": [{"name_pk1": "kuues küsimus", "name_pk2": "kuues paar"}],
+        },
+    })
 
     results = []
 

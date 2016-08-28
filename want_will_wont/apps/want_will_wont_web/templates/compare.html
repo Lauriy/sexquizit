@@ -6,7 +6,6 @@
 
     <form id="generate-link">
 
-
         <div class="row mainrow">
             <div class="large-4 columns">
                 <input autocomplete="off" type="text" id="pk1" placeholder="Your Key"
@@ -17,50 +16,58 @@
                        value="{% if pk2 %}{{ pk2 }}{% endif %}"/>
             </div>
             <div class="large-4 columns">
-                <button class="compare" type="submit">Generate link</button>
+                <button class="compare" type="submit">Ok</button>
             </div>
 
         </div>
     </form>
 
-    <div class="row mainrow">
-            <h4>Link to results</h4>
-            <div id="link" style="visibility: hidden;">
-                <a href="#">#</a>
-            </div>
-    </div>
-
-
     <script>
-        function generateLink() {
-            var pk1 = $("#pk1").val();
-            var pk2 = $("#pk2").val();
-
-            if (pk1 == null && pk2 == null) {
-                return;
-            }
-
-            var url = "/compare";
-            if (pk1) {
-                url += "/" + encodeURIComponent(pk1);
-            }
-            if (pk2) {
-                url += "/" + encodeURIComponent(pk2);
-            }
-
-            $("#link").css('visibility', 'visible');
-            $("#link a").attr('href', url);
-            $("#link a").text(url);
-        }
-
         $(document).ready(function () {
-            generateLink();
             $("#generate-link").submit(function (e) {
-                generateLink();
+            	var pk1 = $("#pk1").val();
+            	var pk2 = $("#pk2").val();
+
+            	if (pk1 == null && pk2 == null) {
+            		return;
+            	}
+
+            	var url = "/compare";
+            	if (pk1) {
+            		url += "/" + encodeURIComponent(pk1);
+            	}
+            	if (pk2) {
+            		url += "/" + encodeURIComponent(pk2);
+            	}
+
+            	window.location = url;
+
                 e.preventDefault();
             });
         });
     </script>
+
+
+{% if analyze_results != None %}
+	test
+	<table>
+		{% for color, categories in analyze_results.items %}
+			<tbody style="background-color: {{color}};">
+				{% for category, results in categories.items %}
+					<tr>
+						<td colspan="2">{{category}}</td>
+					</tr>
+					{% for result in results %}
+						<tr>
+							<td>{{result.name_pk1}}</td>
+							<td>{{result.name_pk2}}</td>
+						</tr>
+					{% endfor %}
+				{% endfor %}
+			</tbody>
+		{% endfor %}
+	</table>
+{% endif %}
 
 
 {% endblock %}

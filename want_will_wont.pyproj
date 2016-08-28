@@ -29,12 +29,12 @@
     <Content Include="requirements_dev.txt" />
     <Content Include="static\apple-touch-icon.png" />
     <Content Include="static\css\custom.css" />
-    <Content Include="static\css\foundation.css" />
+    <Content Include="static\css\foundation.min.css" />
     <Content Include="static\css\foundation_overwrite.css" />
     <Content Include="static\favicon.ico" />
     <Content Include="static\js\custom.js" />
-    <Content Include="static\js\vendor\foundation.js" />
-    <Content Include="static\js\vendor\jquery.js" />
+    <Content Include="static\js\vendor\foundation-6.2.2.js" />
+    <Content Include="static\js\vendor\jquery-2.2.2.js" />
     <Content Include="static\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
     <Content Include="static\js\vendor\what-input.js" />
     <Content Include="static\logo.png" />
@@ -72,7 +72,6 @@
     <Compile Include="want_will_wont\apps\__init__.py" />
     <Compile Include="want_will_wont\settings\base.py" />
     <Compile Include="want_will_wont\settings\local.py" />
-    <Compile Include="want_will_wont\settings\production.py" />
     <Compile Include="want_will_wont\settings\test.py" />
     <Compile Include="want_will_wont\settings\__init__.py" />
     <Compile Include="want_will_wont\urls.py" />
