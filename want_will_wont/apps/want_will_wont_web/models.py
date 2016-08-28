@@ -29,10 +29,6 @@ class Activity(Model):
     paired_with = ForeignKey('self', blank=True, null=True)
 
     def __str__(self):
-        if self.paired_with:
-            return '%s: %s, paired with %s' % (self.category.description, self.description,
-                                               self.paired_with.description)
-
         return '%s: %s' % (self.category.description, self.description,)
 
     class Meta:
