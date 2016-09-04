@@ -1,10 +1,13 @@
 ﻿{% load i18n staticfiles compress %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang=""><!--<![endif]-->
+<html class="no-js" lang="{{ LANGUAGE_CODE }}"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -12,45 +15,42 @@
     <meta name="description" content="{% trans "Find out what your partner likes sexually - you may be surprised." %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="{% static "apple-touch-icon.png" %}">
-    {% compress js %}
-        <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
-    {% endcompress %}
     {% compress css %}
-        <link rel="stylesheet" href="{% static "css/foundation.min.css" %}">
+        <link rel="stylesheet" href="{% static "css/normalize-3.0.3.css" %}">
+        <link rel="stylesheet" href="{% static "css/foundation-5.5.3.css" %}">
         <link rel="stylesheet" href="{% static "css/custom.css" %}">
-        <link rel="stylesheet" href="{% static "css/foundation_overwrite.css" %}">
+        <link rel="stylesheet" href="{% static "css/foundation-overrides.css" %}">
     {% endcompress %}
-
-	{% compress js %}
-		<script src="{% static "js/vendor/jquery-2.2.2.js" %}"></script>
-		<script src="{% static "js/vendor/foundation-6.2.2.js" %}"></script>
-		<script src="{% static "js/vendor/what-input.js" %}"></script>
-		<script src="{% static "js/custom.js" %}"></script>
-	{% endcompress %}
 </head>
 <body>
-<!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}
-<![endif]-->
+<!--[if lt IE 8]>{% blocktrans %}<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>{% endblocktrans %}<![endif]-->
 <div class="wrapper">
 <header class="header">
     <a href="{% url "home" %}" title="{% trans "Back to home page" %}">
-        <img class="logo" src="{% static "logo_icon.png" %}" alt="{% trans "logo" %}"><br>
-        <img class="logotext"  src="{% static "logo_text.png" %}" alt="{% trans "logo text" %}">
+        <img class="logo" src="{% static "logo-icon.png" %}" alt="{% trans "logo" %}"><br>
+        <img class="logotext"  src="{% static "logo-text.png" %}" alt="{% trans "logo text" %}">
     </a>
-
     <ul class="header-subnav">
         <li><a {% if is_home %} class="is-active" {% endif %}href="/">{% trans "Begin!" %}</a></li>
         <li><a {% if is_about %} class="is-active" {% endif %}href="{% url "about" %}">{% trans "About" %}</a></li>
-        <li><a {% if is_contact %} class="is-active" {% endif %}href="{% url "contact" %}">{% trans "Contact" %}</a>
-        </li>
     </ul>
 </header>
 {% block content %}{% endblock %}
 <div class="push"></div>
 </div>
 <footer>
-    <div class="footer">{% trans "&copy; 2016 SexQuiz.it" %}</div>
+    <div class="footer">
+        {% trans "&copy; 2016 SexQuiz.it" %}
+        <a href="mailto:info@sexquiz.it">info@sexquiz.it</a>
+    </div>
 </footer>
+{% compress js %}
+    <script src="{% static "js/jquery-2.2.2.js" %}"></script>
+    <script src="{% static "js/modernizr-2.8.3.js" %}"></script>
+    <script src="{% static "js/foundation-5.5.3.js" %}"></script>
+    <script src="{% static "js/what-input.js" %}"></script>
+    <script src="{% static "js/custom.js" %}"></script>
+{% endcompress %}
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

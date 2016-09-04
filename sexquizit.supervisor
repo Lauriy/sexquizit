@@ -1,0 +1,7 @@
+[program:sexquizit]
+command=/home/sexquizit/want-will-wont/production-uwsgi.sh
+autostart=true
+autorestart=true
+user=sexquizit
+stopasgroup=true
+environment=DJANGO_SETTINGS_MODULE="want_will_wont.settings.local"

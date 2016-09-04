@@ -6,3 +6,5 @@ django-allauth==0.27.0
 django-modeltranslation==0.11
 jsonfield==1.0.3
 uWSGI==2.0.13.1
+django-debug-toolbar==1.5
+django-rosetta==0.7.12

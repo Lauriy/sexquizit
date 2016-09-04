@@ -1,6 +1,6 @@
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
     -webkit-appearance: none;
-    -webkit-border-radius: 0px;
+    -webkit-border-radius: 0;
     background-color: #fff;
     font-family: inherit;
     border-style: solid;
@@ -170,10 +170,10 @@ table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, tabl
     line-height: 1.7rem;
 }
 
-input[type="text"]{
-    display:inline-table;
+input[type="text"] {
+    display: inline-table;
 }
 
-table.comparetable tr.even, table.comparetable tr.alt, table.comparetable tr:nth-of-type(even) {
+table.compare-table tr.even, table.compare-table tr.alt, table.compare-table tr:nth-of-type(even) {
     background: none;
 }

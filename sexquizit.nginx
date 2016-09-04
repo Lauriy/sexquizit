@@ -1,0 +1,45 @@
+upstream sexquizit_app_server {
+    server unix:///home/sexquizit/want-will-wont/sexquizit.sock;
+}
+
+server {
+    server_name www.sexquiz.it sexquiz.it;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443;
+    ssl on;
+
+    ssl_certificate /home/sexquizit/1_sexquiz.it_bundle.crt;
+    ssl_certificate_key /home/sexquizit/sexquizit.key;
+
+    server_name www.sexquiz.it
+    return 301 https://sexquiz.it$request_uri;
+}
+
+server {
+    server_name sexquiz.it;
+    listen 443 ssl;
+
+    client_max_body_size 20M;
+
+    ssl_certificate /home/sexquizit/1_sexquiz.it_bundle.crt;
+    ssl_certificate_key /home/sexquizit/sexquizit.key;
+
+    if ($host !~* ^(sexquiz.it)$ ) {
+        return 444;
+    }
+
+    keepalive_timeout 30;
+
+    location /static {
+        alias /home/sexquizit/want-will-wont/static-cache;
+        expires 7d;
+    }
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass sexquizit_app_server;
+    }
+}

@@ -95,13 +95,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'static-cache'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
 )
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, '../static'),)
+
+COMPRESS_CSS_FILTERS = ['compressor.filters.cssmin.rCSSMinFilter']
+COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

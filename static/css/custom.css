@@ -53,7 +53,7 @@
 }
 
 .headname {
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 }
 
 .center {
@@ -125,70 +125,73 @@ main div {
     width: 100%;
 }
 
-.logotext{
-    padding:0.7rem;
+.logotext {
+    padding: 0.7rem;
 }
 
-.radiotable{
-    min-width:4rem;
-    text-align:center;
+.radiotable {
+    min-width: 4rem;
+    text-align: center;
 }
 
 /*sticky footer*/
-*{
-margin: 0;
+* {
+    margin: 0;
 }
+
 html, body {
-height: 100%;
+    height: 100%;
 }
+
 .wrapper {
-min-height: 100%;
-height: auto !important;
-height: 100%;
-margin: 0 auto -4em;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
 }
+
 .footer, .push {
-height: 4em;
+    height: 4em;
 }
 
-.comparebox{
-    max-width:15rem;
-    padding-top: 0.2rem!important;
+.comparebox {
+    max-width: 15rem;
+    padding-top: 0.2rem !important;
 }
 
-.square{
+.square {
     width: 25px;
     height: 25px;
     margin: 0.5rem;
-    display:inline-flex;
+    display: inline-flex;
 }
 
 .square.green {
-	background: #a7ffbc;
+    background: #a7ffbc;
 }
 
-.square.yellow{
+.square.yellow {
     background: #fff88f;
 }
 
-.square.red{
+.square.red {
     background: #ff8a8a;
 }
 
-.colortext{
+.colortext {
     margin-top: 0.65rem;
 }
 
-.comparetable{
+.comparetable {
     margin-top: 1.3rem;
 }
 
-.emailbox{
+.emailbox {
     max-width: 23rem;
-    margin-top:0.7rem;
+    margin-top: 0.7rem;
 }
 
-.maillabel{
-    margin-top:0.3rem;
-    margin-bottom:0.5rem;
+.maillabel {
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
 }

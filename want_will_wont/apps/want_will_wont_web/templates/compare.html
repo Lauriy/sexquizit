@@ -3,10 +3,8 @@
 {% load i18n %}
 
 {% block content %}
-
     <form id="generate-link">
         <div class="inline-block-center">
-
             <input class="comparebox" autocomplete="off" type="text" id="pk1" placeholder="Your Key"
                    value="{% if pk1 %}{{ pk1 }}{% endif %}"/>
             <input class="comparebox" autocomplete="off" type="text" id="pk2" placeholder="Your Partner Key"
@@ -14,48 +12,16 @@
             <button class="compare" type="submit">Ok</button>
         </div>
     </form>
-
     <div class="flex-center">
         <div class="square green"></div>
-        <div class="colortext">Things you both love and should definitely try.</div>
-
+        <div class="colortext">{% trans "Things you both love and should definitely try." %}</div>
         <div class="square yellow"></div>
-        <div class="colortext">Things that you should talk about.</div><br>
-
+        <div class="colortext">{% trans "Things that you should talk about." %}</div><br>
         <div class="square red"></div>
-        <div class="colortext">Things that are off the list... for now.</div>
+        <div class="colortext">{% trans "Things that are off the list... for now." %}</div>
     </div>
-
-
-    <script>
-        $(document).ready(function () {
-            $("#generate-link").submit(function (e) {
-                var pk1 = $("#pk1").val();
-                var pk2 = $("#pk2").val();
-
-                if (pk1 == null && pk2 == null) {
-                    return;
-                }
-
-                var url = "/compare";
-                if (pk1) {
-                    url += "/" + encodeURIComponent(pk1);
-                }
-                if (pk2) {
-                    url += "/" + encodeURIComponent(pk2);
-                }
-
-                window.location = url;
-
-                e.preventDefault();
-            });
-        });
-    </script>
-
-
     {% if analyze_results != None %}
-
-        <table class="inline-block-center comparetable">
+        <table class="inline-block-center compare-table">
             <thead>
             <tr>
                 <td></td>

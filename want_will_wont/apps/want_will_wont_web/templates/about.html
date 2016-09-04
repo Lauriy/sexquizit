@@ -3,39 +3,34 @@
 {% load i18n %}
 
 {% block content %}
-
-            {% blocktrans %}
-
-               <div class="row mainrow">
-
-  <div class="large-12 columns">
-
-                <h3>Why are we doing this?</h3>
-- this is a fun topic that nobody dares to touch
-- we hope to make sex life better for at least a few people
-
-<h3>There are other similar services but why are we better?</h3>
-- most other websites have questions on pdf, we are digitalized
-- other digital services only have on/off option, we have three choices to leave room for later discussion
-- we are modern, mobile friendly and scalable
-- we have room for improvement
-
-<h3>Where are we heading?</h3>
-- at some point we can start analyzing latest trends
-- we can use neural network to analyze what you might like more than you think
-
-<h3>How are we going to make money?</h3>
-- sell the idea for 200€ and let somebody else worry about it
-
-                </div>
-
-</div>
-
-
-<div class="text-center" style="padding-top:2rem;">
-
-                This is a hackathon project made at <a target="_blank" href="http://digix.eu/loomehakk-vol-2/" title="Loomehäkk">Loomehäkk</a>
-                by Mikk Oad, Tanel Hiob and Lauri Elias.
-            {% endblocktrans %}
-            </div>
+    {% blocktrans %}
+        <div class="small-12 columns text-center">
+            <p>This is a hackathon project made at <a target="_blank" href="http://digix.eu/loomehakk-vol-2/" title="Loomehäkk">Loomehäkk</a> by Mikk Oad, Tanel Hiob and Lauri Elias.</p>
+            <p><h3>Why are you doing this?</h3></p>
+            <p>
+                <li>fun topic that few dare approach</li>
+                <li>we hope to help improve the sex life of at least a few people</li>
+            </p>
+            <p><h3>Why is Sexquizit better than other similar services?</h3></p>
+            <p>
+                <li>some other websites have questions on PDFs that you have to print, we are digitalized</li>
+                <li>many alternatives only have a yes/no option, we have three choices to leave room for discussion</li>
+                <li>we are modern, mobile friendly and scalable</li>
+            </p>
+            <p><h3>Where are you heading?</h3></p>
+            <p>
+                <li>at a high enough usage level we could start analyzing trends</li>
+                <li>we can use neural networks to predict what you might like more than you think</li>
+            </p>
+            <p><h3>How are you going to make money?</h3></p>
+            <p>
+                <li>sell the idea for 500 € and let somebody else worry about it</li>
+                <li>earn enough to cover hosting via ads</li>
+            </p>
+            <p><h3>How private is this?</h3></p>
+            <p>
+                <li>we currently only use Google Analytics, you can use Incognito, Adblock and/or Tor if you're worried</li>
+            </p>
+        </div>
+    {% endblocktrans %}
 {% endblock %}
