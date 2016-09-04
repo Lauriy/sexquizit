@@ -12,7 +12,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         with open(BASE_DIR + '/apps/want_will_wont_web/management/commands/data/questions.json') as f:
             data = loads(f.read())
-            for each in data[:1]:
+            for each in data:
                 new_category = ActivityCategory(description=each['NameLeft'])
                 new_category_pair = ActivityCategory(description=each['NameRight'])
                 new_category.save()
