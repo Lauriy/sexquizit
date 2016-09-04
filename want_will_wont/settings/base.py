@@ -8,7 +8,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'a_5xtd9(j(8c%_h*c3no5fowpvk%q&xe)4p
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.sexquiz.it', 'sexquiz.it']
 
 INSTALLED_APPS = (
     'modeltranslation',
