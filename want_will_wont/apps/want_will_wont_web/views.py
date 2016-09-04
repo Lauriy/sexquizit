@@ -68,11 +68,3 @@ def about(request):
     }
 
     return render_to_response('about.html', RequestContext(request, context))
-
-
-def contact(request):
-    context = {
-        'is_contact': True
-    }
-
-    return render_to_response('contact.html', RequestContext(request, context))
