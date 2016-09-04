@@ -66,3 +66,6 @@ target/
 /obj
 /web.debug.config
 /want_will_wont.pyproj.user
+
+# Vagrant
+.vagrant
